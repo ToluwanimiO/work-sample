@@ -7,7 +7,8 @@
     top: 0;
     width: 100%; /* Full width */
     height: 100%; 
-    overflow: auto; /* Enable scroll if needed */
+    /* overflow: auto; */
+     /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
   }
@@ -18,7 +19,21 @@
     /* padding: 20px; */
     border: 1px solid #888;
     /* width: 80%;  */
-    height: fit-content;
+    height: 100%;
+    border: none;
+    outline: none;
+  }
+  .style-line{
+      width: 134px;
+      height: 5px;
+      background-color: black;
+      border-radius: 100px;
+  }
+  .center-line{
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      padding: 50px 0px 5px 0px;
   }
   .header{
       display: flex;
@@ -35,7 +50,44 @@
   }
   .modal-body{
       background-color: white;
+       
+        height: 65%; 
+        overflow:auto;
+  }
+  .food-div{
+      padding: 20px;
+      display: flex;
+      padding-bottom: 0px;
+      padding-left: 30px;
+  }
+  .food-icon{
+      width: 60px;
+      height: 60px;
+      vertical-align: middle;
+  }
+  .food-details{
+      /* background-color: #FFBE56; */
+      vertical-align: middle;
+      justify-content: center;
+      padding: 12px;
+      padding-left: 25px;
+  }
+  .food-item{
+
+      font-size: 18px;
+      color: #303030;
+      font-family: "Cerebri Sans",sans-serif;
+      font-weight: 100;
+      margin: auto;
       
+  }
+  .food-class{
+      color: #6C6C6C;
+      font-size: 15px;
+      line-height: 24px;
+      font-family: "Cerebri Sans",sans-serif;
+      font-weight: 100;
+      margin: auto;
   }
 
 
@@ -60,4 +112,29 @@
     color: black;
     text-decoration: none;
     cursor: pointer;
+  }
+  @media (min-width:768px) {
+    .modal-content {
+        margin: 3% auto; /* 15% from the top and centered */
+        /* padding: 20px; */
+        border: 1px solid #888;
+        /* width: 80%;  */
+        height: 100%;
+        border: none;
+        outline: none;
+        width: 400px;
+      }
+      .head-left{
+        border-top-left-radius: 20px;
+        background-color: #F9F5E1;
+        padding: 20px 0px 20px 30px;
+        font-size: 20px;
+        line-height: 26px;
+        font-weight: 700;
+        font-family: "PT Serif",serif;
+        width: 70%;
+    }
+    .modal-body{
+          height: 80%;
+    }
   }
