@@ -209,7 +209,8 @@
     font-weight: 500;
     color: #333;
     margin-right: 5px;
-    white-space: nowrap
+    white-space: nowrap;
+    font-family: "Cerebri Sans",sans-serif;
 }
 .text-message{
     background-color: #e4f5fd;
@@ -221,6 +222,7 @@
     padding: 13px 4px 14px 13px;
     margin-left: 10px;
     width: 100%;
+    font-family: "Cerebri Sans",sans-serif;
 }
 .nav{
     padding:10px  30px 10px 30px;
