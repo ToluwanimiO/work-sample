@@ -248,6 +248,8 @@
     text-decoration-thickness: 0.1px;
     text-decoration-color: rgba(255, 255, 255, 0.856);
 }
+
+
 @media (min-width:403px) {
     .div-dark-orange{
         padding: 12px 15px 14px 16px;
@@ -429,5 +431,10 @@
         border-bottom-right-radius: 6px;
         padding: 20px 15px 6px 16px;
         width: 35%;
+    }
+}
+@media (min-device-width: 387px) and (max-device-width: 402px) { 
+    .div-dark-orange{
+        padding: 15px 15px 11px 16px;
     }
 }
