@@ -64,14 +64,14 @@ hideFoodAnimation
   targets: '#blown-food',
   scale: 1,
   // translateX:-1,
-  duration:1000,
+  duration:1200,
 })
 .add({
   targets: "#modal-image-box",
   opacity: [1, 0],
   duration:1000,
   // direction:'reverse'
-},"-=200")
+},"-=100")
 
 const showFoodAnimation = anime.timeline({
   easing: "easeOutCubic",
@@ -145,7 +145,7 @@ modalImage.onclick = function() {
   // modalImage.style.display = "none";
   // alert('hu')
   hideFoodAnimation.play()
-  setTimeout(invisibleFood,400)
+  setTimeout(invisibleFood,600)
   // hideFolderContentAnimation.play();
 }
 function invisibleFood(){
