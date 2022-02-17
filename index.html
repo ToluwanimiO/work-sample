@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./modal.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif|Cerebri+Sans">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Document</title>
 </head>
 <body>
@@ -31,13 +32,77 @@
                     <span class="bolden"> Pay N62,800</span>
                 </span>
             </div>
-            <div class="flex-container">
+            <div class="flex-container zoom-btn">
                 <span class="div-light-orange">
                     View your meals for the week.
                 </span>
                 <span class="div-dark-orange" id="check-meals">
                     Check ‘em 
                 </span>
+            </div>
+            <div id="meals" class="modal modal-meal">
+                <div class="modal-content">
+                    <div class="header" id="header">
+                        <div class="head-left">Today's meals</div>
+                        <div class="close">
+                            <img src="./assets/close.png" class="close-icon"/>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="food-div">
+                            <img class="food-icon" src="./assets/food1.png" />
+                            <span class="food-details">
+                                <span class="food-item">Akara & Pap</span><br/>
+                                <span class="food-class">Carbohydrate</span>
+                            </span>
+                            
+                        </div>
+                        <div class="food-div">
+                            <img class="food-icon" src="./assets/food2.png" />
+                            <span class="food-details">
+                                <span class="food-item">Jollof Rice</span><br/>
+                                <span class="food-class">Protein</span>
+                            </span>
+                            
+                        </div>
+                        <div class="food-div">
+                            <img id="view-food" class="food-icon" src="./assets/food3.png" />
+                            <span class="food-details">
+                                <span class="food-item">Gastonton</span><br/>
+                                <span class="food-class">Carbohydrate</span>
+                            </span>
+                            
+                        </div>
+                        <div class="food-div">
+                            <img class="food-icon" src="./assets/food4.png" />
+                            <span class="food-details">
+                                <span class="food-item">Port Domenic</span><br/>
+                                <span class="food-class">Carbohydrate</span>
+                            </span>
+                            
+                        </div>
+                        <div class="food-div">
+                            <img class="food-icon" src="./assets/food5.png" />
+                            <span class="food-details">
+                                <span class="food-item">Carleeville</span><br/>
+                                <span class="food-class">Fat & Oils</span>
+                            </span>
+                            
+                        </div>
+                        <div class="food-div">
+                            <img class="food-icon" src="./assets/food6.png" />
+                            <span class="food-details">
+                                <span class="food-item">South Chesleyton</span><br/>
+                                <span class="food-class">Vegetable</span>
+                            </span>
+                            
+                        </div>
+                        <!-- <div class="center-line">
+                            <div class="style-line"></div>
+                        </div>    -->
+                    </div>
+                </div>   
+                
             </div>
         </div>
         <div class="blue-bg">
@@ -102,30 +167,9 @@
             </div>
         </div>
     </div>
-    <div class="nav">
-        <div>
-            <img src="./assets/calendar.png"  class="img-icon"/>
-            <p class="icon-text">Schedule</p>
-        </div>
-        <div>
-            <img src="./assets/history.png" class="img-icon" />
-            <p class="icon-text">History</p>
-        </div>
-        <div>
-            <img src="./assets/notifications.png" class="img-icon" />
-            <p class="icon-text">Notifications</p>
-        </div>
-        <div>
-            <img src="./assets/text-box.png" class="img-icon" />
-            <p class="icon-text">Chat</p>
-        </div>
-        <div>
-            <img src="./assets/text-box.png" class="img-icon" />
-            <p class="icon-text">Chat</p>
-        </div>
-    </div>
+  
     <!-- Modal content -->
-    <div id="meals" class="modal">
+    <div id="meals" class="modal modal-meal">
         <div class="modal-content">
             <div class="header">
                 <div class="head-left">Today's meals</div>
@@ -191,8 +235,31 @@
     </div>
 
     <div id="modal-image-box" class="modal-image-box">
-        <div id="modal-image" class="modal-image">
-            <img src="./assets/food.png" class="image-food"/>
+        <div id="modal-image" class="modal-image modal-content">
+            <img src="./assets/food.png" class="image-food" id="blown-food"/>
+        </div>
+    </div>
+
+    <div class="nav">
+        <div>
+            <img src="./assets/calendar.png"  class="img-icon"/>
+            <p class="icon-text">Schedule</p>
+        </div>
+        <div>
+            <img src="./assets/history.png" class="img-icon" />
+            <p class="icon-text">History</p>
+        </div>
+        <div>
+            <img src="./assets/notifications.png" class="img-icon" />
+            <p class="icon-text">Notifications</p>
+        </div>
+        <div>
+            <img src="./assets/text-box.png" class="img-icon" />
+            <p class="icon-text">Chat</p>
+        </div>
+        <div>
+            <img src="./assets/text-box.png" class="img-icon" />
+            <p class="icon-text">Chat</p>
         </div>
     </div>
 </body>
