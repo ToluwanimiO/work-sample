@@ -15,12 +15,30 @@ const hideFolderContentAnimation = anime.timeline({
   autoplay: false
 });
 hideFolderContentAnimation
+
+.add({
+  targets: ".modal-body",
+  height: [50, 10],
+  duration: 1000,
+  direction:'reverse'
+})
+.add({
+  targets: "#header",
+  translateY:btn.getBoundingClientRect().y-40,
+  // opacity: [1, 0],
+  duration:1000,
+},"-=1000")
+.add({
+  targets: ".modal-meal",
+  opacity: [1, 0],
+  duration:1000,
+  direction:'reverse'
+},"-=800")
 .add({
   targets: '.zoom-btn',
   scale: 1,
   duration:300
-})
-
+},"-=700")
 
 
 const showFoodAnimation = anime.timeline({
@@ -78,28 +96,33 @@ btn.onclick = function() {
 }
 btnFood.onclick = function() {
   modalImage.style.display = "block";
-  modal.style.zIndex = "auto";
+  modal.style.zIndex = "1";
   showFoodAnimation.play()
 }
 modalImage.onclick = function() {
   // showFolderContentAnimation.reverse();
   modalImage.style.display = "none";
-  hideFolderContentAnimation.play();
+  // hideFolderContentAnimation.play();
 }
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-  
+  // alert('hi')
   hideFolderContentAnimation.play();
-  modal.style.display = "none";
-  modalImage.style.display = "none";
+  setTimeout(invisible,500)
+  //
+  // modalImage.style.display = "none";
 
 }
-
+function invisible()
+{
+  modal.style.display = "none";
+  window.location.reload();
+}
 // // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
    modalImage.style.display = "none";
-   hideFolderContentAnimation.play();
+  //  hideFolderContentAnimation.play();
   }
 }

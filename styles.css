@@ -225,12 +225,12 @@
     padding:10px  30px 10px 30px;
     background-color: rgba(244,244,244,0.75);
     text-align: center;
-    position: fixed;
+    position: sticky;
+    left: 0;
     bottom: 0;
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     justify-content: space-between;
-    /* margin: -0.6%; */
 }
 .img-icon{
     height: 19px;
