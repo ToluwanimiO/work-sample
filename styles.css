@@ -139,7 +139,7 @@
 .light-text{
     margin-top: -10px;
     font-size: 14px;
-    font-weight: lighter;
+    font-weight: 300;
     color: #383838;
     font-family: "Cerebri Sans",sans-serif;
 }
